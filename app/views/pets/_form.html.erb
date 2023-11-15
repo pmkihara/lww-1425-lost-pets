@@ -1,0 +1,9 @@
+<%= simple_form_for pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <div class="d-flex">
+    <%= f.input :species, collection: Pet::SPECIES %>
+    <%= f.input :found_on, html5: true %>
+  </div>
+  <%= f.button :submit, class: 'btn btn-success' %>
+<% end %>
