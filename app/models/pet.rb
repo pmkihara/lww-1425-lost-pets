@@ -6,6 +6,6 @@ class Pet < ApplicationRecord
   def found_days_ago
     return unless found_on # evita que o método quebre se o found_on for nil
 
-    (Date.today - found_on).to_i
+    (Date.current - found_on).to_i
   end
 end
